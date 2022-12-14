@@ -1,8 +1,9 @@
 import express from "express"
 import routes from "./Routes/routes"
+import connectToMongoDB from "./database/database";
 
 const app = express();
-
+connectToMongoDB()
 app.use(express.json())
 app.use(routes)
 

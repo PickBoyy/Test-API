@@ -3,6 +3,7 @@ import express, { Request, Response }  from "express";
 import controllerRoutes from "../controllers/controllerRoutes";
 
 const routes = Router()
+
 routes.get('/',(req, res) =>{
     res
 })
