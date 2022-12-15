@@ -17,6 +17,6 @@ routes.post('/personagem', upload.none(), controllerRoutes.newPerson);
 routes.delete('/personagem', controllerRoutes.deleteAllPerson);
 
  routes.get('/personagem/:nome', controllerRoutes.getOnePerson);
- routes.delete('/personagem/:nome',upload.none(), controllerRoutes.deleteOnePerson);
+ routes.delete('/delete/:nome', controllerRoutes.deleteOnePerson);
 //--------------------------------------------------------------------------//
 export default routes     // exportando rotas por padrão.

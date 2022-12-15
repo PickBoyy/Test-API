@@ -13,12 +13,6 @@ app.use(compression()) // framework de segurança
 app.use(routes)        // Dizendo pra o express usar nossas rotas
 app.use(helmet())      // framework de segurança
 
-app.route('/')
-.get((req:Request,res:Response) => {
-    res.sendFile(process.cwd() + '../index.html');
-});
-
-
 
 app.listen(3000, () => { // Conectando ao nosso server localhost:3000
     console.log(`Server está rodando na porta 3000 ${Deus}`)

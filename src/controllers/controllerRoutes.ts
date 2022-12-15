@@ -53,22 +53,21 @@ const getOnePerson = (req:Request, res:Response) => {
 };
 //------------------------------------------------------------------------------------//
 //========================|Deleta um personagem pelo nome|===========================================//
-const deleteOnePerson =  (req:Request, res:Response) => {
+const deleteOnePerson = (req:Request, res:Response) => {
     const nome = req.params.nome
 
      Personagem.deleteOne({nome:nome}, (err:Error, data:IPersonagem) => {
 
-    if(!nome) {
+    if(!data) {
         return res.status(400).json({message: "Esse personagem não existe"});
     }
    
     else if (err) {
         return res.json(`Alguma dedu errado, tente novamente. ${err}`);
     }
-    else if (data) {
+    else {
         return res.json({message: "Personagem deletado com sucesso"});
     }
     });
 };
-
 export default {getAllPerson, newPerson,deleteAllPerson,getOnePerson,deleteOnePerson} 

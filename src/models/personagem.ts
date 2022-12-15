@@ -26,6 +26,9 @@ export interface IPersonagem {
     PontosDeVida:number;
     ClasseDeArmadura:number;
     Arma: IArma;
+    Id: number;
+    createAt:Date;
+
 }
 
 const personagemSchema = new mongoose.Schema<IPersonagem>({
@@ -105,6 +108,10 @@ const personagemSchema = new mongoose.Schema<IPersonagem>({
     },
     ClasseDeArmadura: {
         type: Number,
+    },
+    createAt: {
+        type:Date,
+        default:Date.now
     },
 });
 
