@@ -83,37 +83,29 @@ const personagemSchema = new mongoose.Schema<IPersonagem>({
     //
     modforca: {
         type: Number,
-        
     },
     moddestreza: {
         type: Number,
-        
     },
     modconstituicao: {
         type: Number,
-        
     },
     modinteligencia: {
-        type: Number,
-
+        type: Number
     },
     modsabedoria: {
         type: Number,
-        
     },
     modcarisma: {
         type: Number,
-
     },
     //
     PontosDeVida: {
         type: Number,
-
     },
     ClasseDeArmadura: {
         type: Number,
-    
-    }
+    },
 });
 
 personagemSchema.pre('save',function(next) {

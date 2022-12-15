@@ -5,7 +5,7 @@ import  Personagem, { IPersonagem,} from "../models/personagem"
 //========================|Pegar todos os Personagens do banco|===========================================//
 const getAllPerson = (req:Request, res:Response) => {
     Personagem.find({}, (err:Error,data:IPersonagem) => {
-        if(err) {
+        if(err) {                                                                   //aprovado!
             return res.json({Error:err});
         }
         return res.json(data)
@@ -16,18 +16,7 @@ const getAllPerson = (req:Request, res:Response) => {
 const newPerson = (req:Request,res:Response) => {
 Personagem.findOne({nome: req.body.nome }, (err:Error, data:IPersonagem) => {
         if(!data) {
-            const newPerson = new Personagem({
-                nomeDoJogador:req.body.nomeDoJogador,
-                nome: req.body.nome,
-                raca: req.body.raca,
-                classe: req.body.classe,
-                forca: req.body.forca,
-                destreza: req.body.destreza,
-                constituicao: req.body.constituicao,
-                inteligencia: req.body.inteligencia,
-                sabedoria: req.body.sabedoria,
-                carisma: req.body.carisma,
-            })
+            const newPerson = new Personagem(req.body)                                  //aprovado!
             newPerson.save((err,data) => {
                 if(err) return res.json({Error: err});
                 return res.json(Personagem)
@@ -43,7 +32,7 @@ Personagem.findOne({nome: req.body.nome }, (err:Error, data:IPersonagem) => {
 const deleteAllPerson = (req:Request, res:Response) => {
     Personagem.deleteMany({}, err => {
         if(err) {
-          return res.json({message: "Complete delete failed"});
+          return res.json({message: "Complete delete failed"});                    //aprovado!
         }
         return res.json({message: "Complete delete successful"});
     })
@@ -53,27 +42,31 @@ const deleteAllPerson = (req:Request, res:Response) => {
 const getOnePerson = (req:Request, res:Response) => {
     let nome = req.params.nome; 
 
-    Personagem.findOne({nome:nome}, (err:Error, data:IPersonagem) => {
+    Personagem.findOne({nome:nome}, (err:Error, data:IPersonagem) => {             //aprovado!
     if(err || !data) {
         return res.json({message: "Personagem não existe."});
     }
-    else return res.json(data); 
+    else {
+    return res.json(data)
+    } 
     });
 };
 //------------------------------------------------------------------------------------//
 //========================|Deleta um personagem pelo nome|===========================================//
-const deleteOnePerson = (req:Request, res:Response) => {
-    let nome = req.params.nome; 
+const deleteOnePerson =  (req:Request, res:Response) => {
+    const nome = req.params.nome
 
-    Personagem.deleteOne({nome:nome}, (err:Error, data:IPersonagem) => {
-    if(!data) {
+     Personagem.deleteOne({nome:nome}, (err:Error, data:IPersonagem) => {
+
+    if(!nome) {
         return res.status(400).json({message: "Esse personagem não existe"});
     }
    
     else if (err) {
         return res.json(`Alguma dedu errado, tente novamente. ${err}`);
     }
-    else {return res.json({message: "Personagem deletado com sucesso"});
+    else if (data) {
+        return res.json({message: "Personagem deletado com sucesso"});
     }
     });
 };
