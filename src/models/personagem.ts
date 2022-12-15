@@ -49,11 +49,11 @@ const personagemSchema = new mongoose.Schema<IPersonagem>({
     },
     nivel: {
         type: Number,
-        required:true
+        default : 1
     },
     experiencia: {
         type: Number,
-        required:true
+        default: 0
     },
     // 
     forca: {
