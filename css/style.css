@@ -1,6 +1,3 @@
-@import url("/Front/pages/index.scss");
-@import url("/Front/pages/home.scss");
-@import url("/Front/pages/create.scss");
 @import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap");
 * {
@@ -91,32 +88,9 @@ body {
   text-align: center;
 }
 
-.input:valid {
-  border-color: green;
-}
-
-.input:invalid {
-  border-color: rgb(255, 0, 0);
-  background-color: rgba(235, 41, 41, 0.274);
-}
-
 .input:focus {
   background-color: rgba(245, 245, 245, 0.698);
   border: 2px solid rgba(203, 14, 14, 0.814);
-}
-
-.input-radio {
-  background-color: red;
-}
-
-.input-radio:checked + label::before {
-  background-color: red;
-  display: inline-block;
-}
-
-.cadastro__label-radio {
-  font-family: pirata one;
-  margin: 0px 10px 0px 0px;
 }
 
 .cadastro__label .span-active {
@@ -132,15 +106,6 @@ body {
   font-weight: 500;
   display: flex;
   align-items: center;
-}
-
-.input--checkbox {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  margin-right: 8px;
-  border-radius: 3px;
 }
 
 .cadastro__label span {
@@ -331,10 +296,6 @@ body {
   padding: auto;
   border-radius: 4px;
   margin: auto;
-}
-
-.btnCreate1:disabled {
-  background-color: rgba(255, 0, 0, 0.213);
 }
 
 .dropdown-toggle {

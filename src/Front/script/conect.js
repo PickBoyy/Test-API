@@ -1,11 +1,10 @@
-async function listarPersons() {
-    const retorno = await fetch("http://localhost:3000", {
-        method: 'GET'
-    }).then(response => {
-        const personagens =  retorno.json
-        console.log(personagens)
-    }).catch(error => {
-        console.error(403);
-    })
+const url = "http://localhost:3000/personagens"
+
+async function getAllPerson() {
+    const response = await fetch(url)
+    console.log(response)
+
+    const data = await response.json()
+    console.log(data)
 }
-listarPersons()
+getAllPerson()

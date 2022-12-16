@@ -9,16 +9,15 @@ const routes = Router()
 export const Deus = "Sr.PickBoyy"
 //============================|(Rota raiz)|=====================================//
 routes.get('/',(req:Request, res:Response) =>{
-    res.setHeader('Access-Control-Allow-Origin','http://127.0.0.1:5500/src/Front/pages-HTML/create.html')
     res.json({message:`Seja bem vindo novamente ${Deus}`})
 })
 //============================|(Rotas)|=====================================//
-routes.get('/personagem', controllerRoutes.getAllPerson);
-routes.post('/personagem', upload.none(), controllerRoutes.newPerson);
-routes.delete('/personagem', controllerRoutes.deleteAllPerson);
+routes.get('/personagens', controllerRoutes.getAllPerson);
+routes.post('/create', upload.none(), controllerRoutes.newPerson);
+routes.delete('/deleteall', controllerRoutes.deleteAllPerson);
 
  routes.get('/personagem/:nome', controllerRoutes.getOnePerson);
- routes.delete('/personagem/:nome', controllerRoutes.deleteOnePerson);
+ routes.delete('/delete/:nome', controllerRoutes.deleteOnePerson);
 //  routes.put('/personagem/:nome', controllerRoutes.updatePerson);
 //--------------------------------------------------------------------------//
 export default routes     // exportando rotas por padrão.
