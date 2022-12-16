@@ -70,4 +70,17 @@ const deleteOnePerson = (req:Request, res:Response) => {
     }
     });
 };
+//------------------------------------------------------------------------------------//
+//========================|Atualizar um personagem pelo nome|===========================================//
+// const updatePerson = (req:Request, res:Response) => {
+
+// }
+
+
+
+
+
+
+
+//------------------------------------------------------------------------------------//
 export default {getAllPerson, newPerson,deleteAllPerson,getOnePerson,deleteOnePerson} 

@@ -1,0 +1,399 @@
+@import url("/Front/pages/index.scss");
+@import url("/Front/pages/home.scss");
+@import url("/Front/pages/create.scss");
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 300px;
+  background-image: url("../images/wallpaper.jpg");
+  background-color: rgba(105, 26, 26, 0.452);
+  color: rgb(255, 255, 255);
+  margin: auto;
+  text-align: center;
+}
+
+.modal-body {
+  color: black;
+}
+
+.dropdown-menu {
+  margin-left: 45px;
+  background-color: rgba(255, 255, 255, 0.727);
+}
+
+.atributos {
+  padding: 15px;
+  background-color: rgba(248, 248, 248, 0.576);
+  border: 3px solid rgba(210, 16, 16, 0.557);
+  height: auto;
+  width: 450px;
+  margin: auto;
+  margin-top: 90px;
+  border-radius: 7px;
+  color: black;
+  font-size: 22px;
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+}
+
+.h1 {
+  color: rgb(208, 0, 0);
+  font-size: 80px;
+  font-family: Pirata One, Arial, Helvetica, sans-serif;
+}
+
+.h3 {
+  color: rgba(208, 0, 0, 0.501);
+  font-size: 30px;
+  font-family: Pirata One, Arial, Helvetica, sans-serif;
+  margin-top: 16px;
+}
+
+.h2 {
+  color: rgba(8, 8, 8, 0.785);
+  font-size: 30px;
+  font-family: Pirata One, Arial, Helvetica, sans-serif;
+}
+
+.titulo {
+  font-size: 49px;
+  color: rgb(0, 0, 0);
+  margin-top: 90px;
+}
+
+.h1name {
+  font-size: 45px;
+}
+
+.modal-title {
+  color: black;
+}
+
+.input {
+  width: 300px;
+  height: 50px;
+  margin-right: 5px;
+  margin: auto;
+  margin-top: 1px;
+  background-color: rgba(255, 255, 255, 0.856);
+  border: 2px solid black;
+  border-radius: 5px;
+  outline: none;
+  font-size: 20px;
+  padding: 25px 10px 20px;
+  font-weight: 300;
+  color: black;
+  font-family: inherit;
+  text-align: center;
+}
+
+.input:valid {
+  border-color: green;
+}
+
+.input:invalid {
+  border-color: rgb(255, 0, 0);
+  background-color: rgba(235, 41, 41, 0.274);
+}
+
+.input:focus {
+  background-color: rgba(245, 245, 245, 0.698);
+  border: 2px solid rgba(203, 14, 14, 0.814);
+}
+
+.input-radio {
+  background-color: red;
+}
+
+.input-radio:checked + label::before {
+  background-color: red;
+  display: inline-block;
+}
+
+.cadastro__label-radio {
+  font-family: pirata one;
+  margin: 0px 10px 0px 0px;
+}
+
+.cadastro__label .span-active {
+  font-size: 11px;
+  margin: -10px 10px 70px 7px;
+  color: rgba(246, 0, 0, 0.342);
+}
+
+.cadastro__label--checkbox {
+  width: 100%;
+  margin: 10px;
+  font-size: 0.9em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.input--checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.cadastro__label span {
+  padding: 15px 0px 5px 15px;
+  position: absolute;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(246, 0, 0, 0.621);
+  margin: auto;
+  cursor: text;
+  transition: all 0.3s ease;
+}
+
+.container00 {
+  margin: auto;
+  text-align: center;
+  margin-top: -40px;
+  background-color: rgba(186, 186, 186, 0.839);
+  width: 400px;
+  height: 1450px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.354);
+  border: 3px solid rgba(255, 255, 255, 0.692);
+  font-family: Pirata One, Arial, Helvetica, sans-serif;
+  font-size: 40px;
+}
+
+.container2 {
+  margin-top: 10px;
+}
+
+.P1 {
+  color: rgba(29, 68, 197, 0.733);
+}
+
+.P2 {
+  color: rgba(201, 1, 1, 0.733);
+}
+
+.logoPc {
+  width: 220px;
+  height: 250px;
+}
+
+.logoPc2 {
+  width: 220px;
+  height: 250px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.navbar {
+  background-color: rgba(251, 231, 231, 0.601);
+  border-radius: 5px;
+}
+
+.combate {
+  margin-top: 50px;
+  margin-left: 20px;
+  color: rgb(0, 0, 0);
+}
+
+#dado {
+  text-align: center;
+  margin: auto;
+  font-size: 110px;
+  margin-top: 350px;
+  margin-left: 650px;
+  background-color: rgba(255, 0, 0, 0.861);
+  height: 200px;
+  width: 200px;
+  color: white;
+  text-align: center;
+  margin: auto;
+  border-radius: 0px 35px 1px 35px;
+  padding: 3px 10px 10px 10px;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.416);
+  border: solid 1px white;
+}
+
+.btnP1 {
+  background-color: rgba(29, 68, 197, 0.733);
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  border: 3px solid rgba(245, 245, 245, 0.637);
+  color: white;
+}
+
+.btnP2 {
+  background-color: rgba(201, 1, 1, 0.733);
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  border: 3px solid rgba(245, 245, 245, 0.637);
+  color: white;
+}
+
+.X {
+  width: 20px;
+  height: 20px;
+}
+
+.btnAClose {
+  font-size: 18px;
+  font-family: oswald;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  border: none;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.btnA {
+  font-size: 18px;
+  font-family: oswald;
+  background-color: rgba(255, 0, 0, 0.63);
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.566);
+  height: auto;
+  width: auto;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.btnA:hover {
+  transition: 0.5s;
+  background-color: rgba(227, 7, 7, 0.821);
+  color: black;
+}
+
+.btnAdventure {
+  font-size: 25px;
+  font-family: oswald;
+  background-color: rgba(154, 10, 10, 0.63);
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.566);
+  height: 100px;
+  width: 250px;
+  padding: 5px;
+  border-radius: 6px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.btnAdventure:hover {
+  transition: 1s;
+  background-color: rgb(141, 0, 0);
+}
+
+.btnHelp {
+  margin-top: 20px;
+  margin-left: 1200px;
+}
+
+.btnComb {
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+.btnCreate {
+  height: 50px;
+  width: 160px;
+  font-size: 18px;
+  font-family: oswald;
+  background-color: rgba(255, 0, 0, 0.63);
+  color: white;
+  border: 2px solid rgba(0, 0, 0, 0.566);
+  padding: 5px;
+  border-radius: 4px;
+  margin: auto;
+}
+
+.btnCreate1 {
+  height: 70px;
+  width: 210px;
+  font-size: 18px;
+  font-family: oswald;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: 2px solid rgba(0, 0, 0, 0.566);
+  padding: auto;
+  border-radius: 4px;
+  margin: auto;
+}
+
+.btnCreate1:disabled {
+  background-color: rgba(255, 0, 0, 0.213);
+}
+
+.dropdown-toggle {
+  margin: 10px 10px 10px 10px;
+}
+
+.dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.616);
+  text-align: center;
+  width: auto;
+  margin: auto;
+}
+
+.divDado {
+  text-align: center;
+  margin-top: 250px;
+}
+
+#player1 {
+  height: 300px;
+  margin-top: 100px;
+  margin-bottom: 1100px;
+}
+
+#player2 {
+  height: 300px;
+  margin-bottom: 1100px;
+}
+
+.display {
+  width: 400px;
+  height: 800px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.527);
+  border-radius: 5px;
+  border: 3px solid rgba(255, 255, 255, 0.61);
+}
+
+.detalhes {
+  font-size: 50px;
+  color: black;
+  font-family: Pirata One, Arial, Helvetica, sans-serif;
+}
+
+.console {
+  width: 350px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.918);
+  margin: auto;
+  margin-top: 50px;
+  font-size: 16px;
+  font-family: oswaldo, Arial, Helvetica, sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav-link {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
