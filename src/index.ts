@@ -76,6 +76,6 @@ app.use(helmet())      // framework de segurança
 app.listen(3000, () => {
     console.log(`Server está rodando na porta 3000 ${Deus}`)  
 }); 
-})
+//})
 
 export default app      // Exportando noss express por padrão.

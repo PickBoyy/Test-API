@@ -1,21 +1,25 @@
-import { IPersonagem } from "../../models/personagem"
+// import { IPersonagem } from "../../models/personagem"
 
-const url = "http://localhost:3000/personagens/"
+// const url = "http://localhost:3000/personagens"
 
-async function getAllPerson() {
-    const response = await fetch(url)
-    console.log(response)
+// async function getAllPerson() {
+//     try {
+//         const response = await fetch(url)
+//         console.log(response)
+    
+//         const data = await response.json()
+//         console.log(data)
 
-    const personagens = await response.json()
-    console.log(personagens)
+//     } catch (error) {
+//         console.log("sexo na rave")
+//     }
+// }
+// getAllPerson()
 
-    personagens.map(() => {
-        const espace = document.createElement("div")
-        
-        espace.innerText = personagens
-
-        .appendChild(espace)
-        
-    })
-}
-getAllPerson()
+// function show(personagens:IPersonagem) {
+//     let output = ''
+//     for(let personagem of personagem){
+//         output += `<li>${personagens.nome}</li>`
+//     }
+//     document.querySelector('main').innerHTML
+// }
