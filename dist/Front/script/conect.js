@@ -1,5 +1,4 @@
 "use strict";
-//import { IPersonagem } from "../../models/personagem"
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -9,18 +8,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const url = "http://localhost:3000/personagens";
-function getAllPerson() {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            const response = yield fetch(url);
-            console.log(response);
-            const personagens = yield response.json();
-            console.log(personagens);
-        }
-        catch (error) {
-            console.log("sexo na rave");
-        }
+Object.defineProperty(exports, "__esModule", { value: true });
+const url = 'http://localhost:3000/personagens';
+if (require.main === module) {
+    (() => __awaiter(void 0, void 0, void 0, function* () {
+        console.log('Hellow World');
+    }))().catch((err) => {
+        console.log(err);
     });
 }
-getAllPerson();
