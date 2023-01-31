@@ -9,11 +9,23 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const url = 'http://localhost:3000/personagens';
-if (require.main === module) {
-    (() => __awaiter(void 0, void 0, void 0, function* () {
-        console.log('Hellow World');
-    }))().catch((err) => {
-        console.log(err);
+const url = "http://localhost:3000/personagens/";
+const main = document.getElementById('#main');
+function getPersons() {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            const response = yield fetch(url);
+            const data = yield response.json();
+            console.log(data);
+            show(data);
+        }
+        catch (error) {
+            console.log(error);
+        }
     });
+}
+getPersons();
+function show(personagens) {
+    let output = '';
+    main.innerHTML = personagens;
 }

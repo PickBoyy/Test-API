@@ -12,7 +12,7 @@ routes.get('/',(req:Request, res:Response) =>{
     res.json({message:`Seja bem vindo novamente ${Deus}`})
 })
 //============================|(Rotas)|=====================================//
-routes.get('/personagens', controllerRoutes.getAllPerson);
+routes.get('/personagem', controllerRoutes.getAllPerson);
 routes.post('/create', upload.none(), controllerRoutes.newPerson);
 routes.delete('/deleteall', controllerRoutes.deleteAllPerson);
 
